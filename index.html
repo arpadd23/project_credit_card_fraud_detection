@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Fraud Detection</title>
+</head>
+<body>
+    <h2>Credit Card Fraud Prediction</h2>
+    <form method="post">
+        {% for i in range(1, 30) %}
+        <label for="V{{i}}">V{{i}}:</label>
+        <input type="text" id="V{{i}}" name="V{{i}}"><br><br>
+        {% endfor %}
+        <label for="Amount">Amount:</label>
+        <input type="text" id="Amount" name="V29"><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+    <h3>Prediction Result: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
